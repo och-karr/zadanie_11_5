@@ -2,15 +2,15 @@ function Button(text) {
 	this.text = text || 'Hello'; //ustawiamy poczatkowa wartosc dla text w nowych obiektach, wlasciwosc dostaje domyslna wartosc Hello
 }
 
-// prototyp - obsluguje przycisk na stronie
+// prototyp - obsluguje przycisk na stronie:
 Button.prototype = {
-	//metoda create tworzy przycisk na stronie
+	//metoda create tworzy przycisk na stronie:
 	create: function() {
 		var self = this;
-	this.$element = $('<button>');  //Konstrukcja -this.$element- ma za zadanie trzymać w właściwości -element-
-									//przycisk (element DOM), który stworzyliśmy za pomocą jQuery.
+	this.$element = $('<button>');  //Konstrukcja -this.$element- ma za zadanie trzymać w właściwości -element- >
+									//< przycisk (element DOM), który stworzyliśmy za pomocą jQuery.
 	this.$element.text(this.text);  // ustawiamy tekst na przycisku za pomoca jQuery
-	// ta metoda po kliknieciu w przycisk wyswietla tekst na ekranie
+	// ta metoda po kliknieciu w przycisk wyswietla tekst na ekranie:
 	this.$element.click(function() {
 		alert(self.text);
 	});
