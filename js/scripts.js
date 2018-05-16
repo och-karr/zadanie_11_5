@@ -19,3 +19,6 @@ Button.prototype = {
 	}
 }
 
+var btn1 = new Button('Hello!'); //tworzenie pierwszej instancji klasy
+btn1.create(); // wywolanie metody create w celu stworzenia elementu
+
